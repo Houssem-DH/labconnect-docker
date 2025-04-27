@@ -1,0 +1,23 @@
+# 1) Exclude host-side Node dependencies (we’ll install fresh inside the container)
+src/node_modules
+
+# 2) Exclude host-side Composer dependencies
+src/vendor
+
+# 3) Exclude previous build outputs
+src/public/build
+# Ignore the public storage symlink/copy
+src/public/storage
+
+
+
+# 4) Environment & log files
+
+*.log
+
+# 5) Ignore macOS/Windows cruft & misc
+.DS_Store
+Thumbs.db
+
+# 6) Ignore Docker helper files themselves
+.dockerignore

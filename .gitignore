@@ -1,0 +1,40 @@
+# Ignore PHPUnit cache and results
+src/.phpunit.cache
+src/.phpunit.result.cache
+
+# Node modules
+src/node_modules/
+
+# Vite/Laravel build artifacts
+src/public/build/
+src/public/hot/
+src/public/storage
+
+
+# Laravel storage keys
+src/storage/*.key
+
+# Composer dependencies
+src/vendor/
+
+# Environment files
+src/.env
+src/.env.backup
+src/.env.production
+
+# Homestead & auth configs
+src/Homestead.json
+src/Homestead.yaml
+src/auth.json
+
+# Logs
+src/npm-debug.log
+src/yarn-error.log
+
+# IDE/project files
+src/.fleet/
+src/.idea/
+src/.vscode/
+
+# Archives
+src/*.zip
