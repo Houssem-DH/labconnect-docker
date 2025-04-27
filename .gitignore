@@ -18,7 +18,7 @@ src/storage/*.key
 src/vendor/
 
 # Environment files
-src/.env
+#src/.env
 src/.env.backup
 src/.env.production
 
