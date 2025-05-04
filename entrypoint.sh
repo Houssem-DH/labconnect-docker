@@ -27,8 +27,8 @@ until nc -z db 5432; do
 done
 
 # 5) Run migrations
-php artisan migrate
-php artisan make:seeder SuperAdminSeeder
+php artisan migrate:fresh --seed
+
 
 
 
