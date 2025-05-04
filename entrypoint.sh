@@ -28,38 +28,11 @@ done
 
 # 5) Run migrations
 php artisan migrate
+php artisan make:seeder SuperAdminSeeder
 
 
-# 6) Insert super-admin via psql
-psql "host=db user=$DB_USERNAME dbname=$DB_DATABASE password=$DB_PASSWORD" <<'EOF'
-INSERT INTO users (
-  id,
-  email,
-  is_super_admin,
-  is_admin,
-  director,
-  is_banned,
-  first_name,
-  last_name,
-  password,
-  created_at,
-  updated_at
-)
-VALUES (
-  1,
-  'superadmin@gmail.com',
-  1,
-  0,
-  0,
-  0,
-  'Super',
-  'Admin',
-  '$2y$12$0ggB8Coa5/QImoI3mJdGzOImY1iODLzvkcAgej7Nah0zpn1uftUva',
-  NOW(),
-  NOW()
-)
-ON CONFLICT (email) DO NOTHING;
-EOF
+
+
 
 # 6) Clear & cache
 php artisan config:clear
