@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Artisan;
 
@@ -20,6 +21,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //Artisan::call('up');
+        if (in_array($this->app->environment(), ['production', 'staging'])) {
+            URL::forceScheme('https');
+        }
     }
 }
